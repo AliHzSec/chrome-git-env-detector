@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & ENV Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Git & ENV Detector</h1>
+      <div class="main-toggle">
+        <label class="switch">
+          <input type="checkbox" id="mainToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label" id="mainToggleLabel">ON</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control-item">
+        <label class="switch">
+          <input type="checkbox" id="gitToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="control-label">.git Check</span>
+      </div>
+      <div class="control-item">
+        <label class="switch">
+          <input type="checkbox" id="envToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="control-label">.env Check</span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-label">Total Found:</span>
+        <span class="stat-value" id="totalCount">0</span>
+      </div>
+      <button class="clear-btn" id="clearAll">Clear All</button>
+    </div>
+
+    <div class="results-container">
+      <div class="results-header">
+        <h2>Detected Exposures :</h2>
+      </div>
+      <div class="results-list" id="resultsList">
+        <div class="empty-state">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M9 11l3 3L22 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>No exposures detected yet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
